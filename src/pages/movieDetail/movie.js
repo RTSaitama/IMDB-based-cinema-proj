@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react"
  
 import { useParams } from "react-router-dom"
 
-const Movie  = async  () => {
+const Movie  =  () => {
     const [currentMovieDetail, setMovie] = useState()
     // має повернути ключ/значення, id з поточного URL-адреса ?
     const { id } = useParams()
@@ -20,7 +20,7 @@ const Movie  = async  () => {
         .then(data => setMovie(data))
     }
 
-    return defer (
+    return (
         <div className="movie">
             <div className="movie_intro">
                 <img className="movie_back" 
