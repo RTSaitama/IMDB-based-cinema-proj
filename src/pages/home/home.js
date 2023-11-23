@@ -5,7 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { Link } from "react-router-dom";
 import MovieList from "../../components/movieList/movieList";
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import Skeleton from "react-loading-skeleton";
 // Import Swiper styles
 import 'swiper/css';
 
@@ -20,6 +20,14 @@ const Home = () => {
     }, [])
 
     return (
+        isLoading
+        ?
+        <div className="poster">
+                <SkeletonTheme color="#a5a4a4" >
+                <Skeleton height={1000} duration={1} />
+            </SkeletonTheme>
+        </div>
+        :
         <>
             <div className="poster">
                 <Swiper
