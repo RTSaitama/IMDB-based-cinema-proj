@@ -32,20 +32,21 @@ const Home = () => {
                     {
                         popularMovies.map(movie => (
                    <Link style={{textDecoration:"none",color:"white"}} to={`/movie/${movie.id}`} >
+                    {/* свайпер хіро */}
                              <SwiperSlide>
                                 <div className="posterImage">
                                     <img src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} />
                                 </div>
-                                <div className="posterImage__overlay">
-                                    <div className="posterImage__title">{movie ? movie.original_title: ""}</div>
-                                    <div className="posterImage__runtime">
+                                <div className="posterImage_overlay">
+                                    <div className="posterImage_title">{movie ? movie.original_title: ""}</div>
+                                    <div className="posterImage_runtime">
                                         {movie ? movie.release_date : ""}
-                                        <span className="posterImage__rating">
+                                        <span className="posterImage_rating">
                                             {movie ? movie.vote_average :""}
                                             <i className="fas fa-star" />{" "}
                                         </span>
                                     </div>
-                                    <div className="posterImage__description">{movie ? movie.overview : ""}</div>
+                                    <div className="posterImage_description">{movie ? movie.overview : ""}</div>
                                 </div>
                                 </SwiperSlide>
                             </Link>

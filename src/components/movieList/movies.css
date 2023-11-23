@@ -1,15 +1,16 @@
-.movie__list {
+.movie_list {
     padding: 20px;
 }
 
-.list__title {
+.list_title {
 font-size: 2rem;
 margin:  5px;
 color: brown;
 }
 
-.list__cards {
-    display: block;
-    flex-wrap: nowrap ;
+.list_cards {
+    display: flex;
+    flex-wrap: wrap ;
     justify-content: center;
+    align-items: center;
 }

@@ -7,11 +7,13 @@ const Movie = () => {
     // має повернути ключ/значення, id з поточного URL-адреса ?
     const { id } = useParams()
 
+    // скидує скрол коли дата прилітає
     useEffect(() => {
         getData()
         window.scrollTo(0,0)
     }, [])
 
+    // другий запит  на більш детальний опис
     const getData = () => {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=4e44d9029b1270a757cddc766a1bcb63`)
         .then(res => res.json())
@@ -20,53 +22,54 @@ const Movie = () => {
 
     return (
         <div className="movie">
-            <div className="movie__intro">
-                <img className="movie__backdrop" 
+            <div className="movie_intro">
+                <img className="movie_back" 
                 src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`} />
             </div>
-            <div className="movie__detail">
-                <div className="movie__detailLeft">
-                    <div className="movie__posterBox">
-                        <img className="movie__poster" 
+            <div className="movie_detail">
+                <div className="movie_detailLeft">
+                    <div className="movie_posterBox">
+                        <img className="movie_poster" 
                         src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.poster_path : ""}`} />
                     </div>
                 </div>
-                <div className="movie__detailRight">
-                    <div className="movie__detailRightTop">
-                          <div className="movie__name">{currentMovieDetail ? currentMovieDetail.original_title : ""}</div>
-                        <div className="movie__tagline">{currentMovieDetail ? currentMovieDetail.tagline : ""}</div>
-                         <div className="movie__rating">
+                <div className="movie_detailRight">
+                    <div className="movie_detailRightTop">
+                          <div className="movie_name">{currentMovieDetail ? currentMovieDetail.original_title : ""}</div>
+                        <div className="movie_tagline">{currentMovieDetail ? currentMovieDetail.tagline : ""}</div>
+                         <div className="movie_rating">
                             {currentMovieDetail ? currentMovieDetail.vote_average: ""} <i class="fas fa-star" />
-                            <span className="movie__voteCount">{currentMovieDetail ? "(" + currentMovieDetail.vote_count + ") votes" : ""}</span>
+                            
+                            {/* не оцінка, голоси за цю оцінку */}
+                            <span className="movie_voteCount">{currentMovieDetail ? "(" + currentMovieDetail.vote_count + ") votes" : ""}</span>
                         </div>  
-                         <div className="movie__runtime">{currentMovieDetail ? currentMovieDetail.runtime + " mins" : ""}</div>
-                                 <div className="movie__releaseDate">{currentMovieDetail ? "Release date: " + currentMovieDetail.release_date : ""}</div>
-                         <div className="movie__genres">
+                         <div className="movie_runtime">{currentMovieDetail ? currentMovieDetail.runtime + " m" : ""}</div>
+                                 <div className="movie_releaseDate">{currentMovieDetail ? "Release date: " + currentMovieDetail.release_date : ""}</div>
+                         <div className="movie_genres">
                             {
+                                // жанрові мітки
                                 currentMovieDetail && currentMovieDetail.genres
                                 ? 
                                 currentMovieDetail.genres.map(genre => (
-                                    <><span className="movie__genre" id={genre.id}>{genre.name}</span></>
+                                    <><span className="movie_genre" id={genre.id}>{genre.name}</span></>
                                 )) 
                                 : 
                                 ""
                             }
                         </div>
                     </div>
-                    <div className="movie__detailRightBottom">
-                        <div className="synopsisText">Synopsis</div>
+                    <div className="movie_detailRightBottom">
+                        <div className="descText">Description</div>
                                 <div>{currentMovieDetail ? currentMovieDetail.overview : ""}</div>
                     </div>
                     
                 </div>
             </div>
-            <div className="movie__links">
-                <div className="movie__heading">Look more, follow links</div>
+            <div className="movie_links">
+                <div className="movie_heading">Look more, follow link</div>
+            
                 {
-                    currentMovieDetail && currentMovieDetail.homepage && <a href={currentMovieDetail.homepage} target="_blank" style={{textDecoration: "none"}}><p><span className="movie__homeButton movie__Button">Homepage <i className="newTab fas fa-external-link-alt"></i></span></p></a>
-                }
-                {
-                    currentMovieDetail && currentMovieDetail.imdb_id && <a href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id} target="_blank" style={{textDecoration: "none"}}><p><span className="movie__imdbButton movie__Button">IMDb<i className="newTab fas fa-external-link-alt"></i></span></p></a>
+                    currentMovieDetail && currentMovieDetail.imdb_id && <a href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id} target="_blank" style={{textDecoration: "none"}}><p><span className="movie_imdbButton movie_Button">IMDb<i className="newTab fas fa-external-link-alt"></i></span></p></a>
                 }
             </div>
             {/* <div className="movie__heading">Made_by</div>
@@ -74,5 +77,6 @@ const Movie = () => {
         </div>
     )
 }
+
 
 export default Movie

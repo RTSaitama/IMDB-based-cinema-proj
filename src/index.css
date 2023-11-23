@@ -5,8 +5,5 @@
 
 html, body, #root, .App {
   min-height: 100%;
-  background-image: url(./assets/star_wars_bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }

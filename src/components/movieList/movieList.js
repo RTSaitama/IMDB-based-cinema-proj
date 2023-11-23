@@ -6,6 +6,8 @@ import Cards from "../card/card"
 const MovieList = () => {
     
     const [movieList, setMovieList] = useState([])
+
+    // роут парамс
     const {type} = useParams()
 
     useEffect(() => {
@@ -15,7 +17,7 @@ const MovieList = () => {
     useEffect(() => {
         getData()
     }, [type])
-
+    // другий запит
     const getData = () => {
         fetch(`https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`)
         .then(res => res.json())
@@ -23,9 +25,10 @@ const MovieList = () => {
     }
 
     return (
-        <div className="movie__list">
-            <h2 className="list__title">{(type ? type : "POPULAR").toUpperCase()}</h2>
-            <div className="list__cards">
+        <div className="movie
+        _list">
+            <h2 className="list_title">{(type ? type : "POPULAR").toUpperCase()}</h2>
+            <div className="list_cards">
                 {
                     movieList.map(movie => (
                         <Cards movie={movie} />
