@@ -182,7 +182,11 @@
   background-color: #00000057;
 }
 
-.swiper .swiper-slide {
+.swiper {
+  overflow: hidden;
+}
+
+.swiper-slide {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -205,10 +209,10 @@
   -o-transform: perspective(350px) rotateX(10deg);
   transform: perspective(350px) rotateX(10deg);
 }
-.swiper .swiper-slide:hover {
+.swiper-slide:hover {
   transform: scale(0.9);
 }
-.swiper .swiper-slide .movie_card_desc {
+.swiper-slide .movie_card_desc {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -216,18 +220,20 @@
   justify-content: center;
   align-items: center;
 }
-.swiper .swiper-slide .movieCardPoster {
+.swiper-slide .movieCardPoster {
   max-height: 300px;
   position: relative;
 }
-.swiper .movie_card_title {
+
+.movie_card_title {
   font-size: 1.5rem;
   line-height: 1.4rem;
   display: block;
   width: 100%;
   text-transform: capitalize;
 }
-.swiper .movie_card_year {
+
+.movie_card_year {
   font-size: 0.9rem;
   display: block;
   width: 100%;
@@ -235,7 +241,8 @@
   letter-spacing: -0.05em;
   margin-bottom: 5px;
 }
-.swiper .movie_card_details {
+
+.movie_card_details {
   position: absolute;
   right: 0;
   left: 0;
