@@ -5,7 +5,7 @@ import Logo from "../logo/Logo"
 const Header = () => {
     return (
         <div className="header">
-            <div className="headerLeft">
+            <div className="headerNav">
                 <Link to="/"><Logo/></Link>
                 <Link to="/movies/popular" style={{textDecoration: "none"}}><span>Popular</span></Link>
                 <Link to="/movies/top_rated" style={{textDecoration: "none"}}><span>Top Rated</span></Link>
