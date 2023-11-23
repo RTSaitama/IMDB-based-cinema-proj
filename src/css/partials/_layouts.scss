@@ -92,7 +92,7 @@ background-size: cover;
  
 }
 
-.card__overlay{
+.card_overlay{
  
   padding: 0 1rem 1rem 1rem;
   bottom: 0px;
@@ -246,21 +246,20 @@ bottom: 48%;
 
  
     font-size: 1.5rem;
-  line-height: 1.4rem;
+  line-height: 1.5rem;
   display: block;
   width: 100%;
   text-transform: capitalize;
 
   }
   .movie_card_year{
-    font-size: .9rem;
+    font-size: 1.5rem;
  
   display: block;
   width: 100%;
   text-transform: capitalize;
 
- 
-	letter-spacing: -0.05em;
+  
   margin-bottom: 5px;
   }
   .movie_card_details{
@@ -299,7 +298,7 @@ a{
 }
 a > span{
     margin: 50px;
-    font-size: 1.25rem;
+    font-size: 2rem;
  
     color: rgb(67, 63, 180);
     transform: scale(1.1);
@@ -389,8 +388,8 @@ color: brown;
 
 .posterImage_description {
   font-style: italic;
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   display: flex;
   text-align: left;
   width: 50%;
