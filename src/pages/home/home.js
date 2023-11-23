@@ -33,6 +33,10 @@ const Home = () => {
                 <Swiper
                     showThumbs={false}
                     autoPlay={true}
+                    autoplay={{
+                        delay: 50,
+                        disableOnInteraction: false
+                    }}
                     transitionTime={3}
                     infiniteLoop={true}
                     showStatus={false}
