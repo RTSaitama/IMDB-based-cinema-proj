@@ -20,14 +20,14 @@ const Home = () => {
     }, [])
 
     return (
-        isLoading
-        ?
-        <div className="poster">
-                <SkeletonTheme color="#a5a4a4" >
-                <Skeleton height={1000} duration={1} />
-            </SkeletonTheme>
-        </div>
-        :
+        // isLoading
+        // ?
+        // <div className="poster">
+        //         <SkeletonTheme color="#a5a4a4" >
+        //         <Skeleton height={1000} duration={1} />
+        //     </SkeletonTheme>
+        // </div>
+        // :
         <>
             <div className="poster">
                 <Swiper
