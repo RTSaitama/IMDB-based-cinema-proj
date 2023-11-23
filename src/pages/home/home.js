@@ -5,7 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { Link } from "react-router-dom";
 import MovieList from "../../components/movieList/movieList";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Skeleton from "react-loading-skeleton";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton"
 // Import Swiper styles
 import 'swiper/css';
 
