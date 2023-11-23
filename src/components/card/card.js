@@ -20,7 +20,7 @@ const Cards = ({movie}) => {
         <div className="cards">
             {/*фіча на підгрузку  початкового леяута для карток  які ще летять */}
             <SkeletonTheme color="#a5a4a4" >
-                <Skeleton height={300} duration={1} />
+                <Skeleton height={300} duration={3} />
             </SkeletonTheme>
         </div>
         :
