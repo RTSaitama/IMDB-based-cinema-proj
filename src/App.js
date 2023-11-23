@@ -11,6 +11,7 @@ function App() {
         <Router>
           <Header />
             <Routes>
+              {/* додати лейзі */}
                 <Route index element={<Home />}></Route>
                 <Route path="movie/:id" element={<Movie />}></Route>
                 <Route path="movies/:type" element={<MovieList />}></Route>

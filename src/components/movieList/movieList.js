@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react"
-import "./movies.css"
+ 
 import { useParams } from "react-router-dom"
 import Cards from "../card/card"
 

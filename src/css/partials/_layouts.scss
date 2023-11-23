@@ -281,9 +281,280 @@ bottom: 48%;
 
   }
  
+  .header {
+
+    align-items: center;
+    display: flex;
+    justify-content:space-between;
+    
+}
+
+.headerNav, .headerNav2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+a{
+    
+}
+a > span{
+    margin: 50px;
+    font-size: 1.25rem;
  
+    color: rgb(67, 63, 180);
+    transform: scale(1.1);
+}
+
+a > span:hover {
+    color: rgb(151, 153, 161)(0, 123, 255);
+}
+
+.header_icon {
+    width: 40px;
+    cursor: pointer;
+}
+.header_icon{
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+}
+.user_avatar {
+    font-size: 2rem;
+}
+
+.movie_list {
+  padding: 20px;
+}
+
+.list_title {
+font-size: 2rem;
+margin:  5px;
+color: brown;
+}
+
+.list_cards {
+  display: flex;
+  flex-wrap: wrap ;
+  justify-content: center;
+  align-items: center;
+}
  
 
+
+
+.posterImage{
+  height: 600px;
+}
+
+.posterImage > img {
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+
+.posterImage_overlay {
+  position: absolute;
+  padding: 50px;
+  bottom: 0px;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
+  opacity: 1;
+  transition: opacity .3s;
+}   
+
+.posterImage_overlay:hover {
+  opacity: 1;
+}
+
+.posterImage_title {
+  font-weight: 900;
+  font-size: 4rem;
+  margin-bottom: 0.4rem;
+  text-align: left;
+}
+
+.posterImage_runtime {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.posterImage_rating {
+  margin-left: 3rem;
+}
+
+.posterImage_description {
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  text-align: left;
+  width: 50%;
+}
+
+
+
+
+
+
+.movie {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.movie_intro {
+  width: 80%;
+  border-radius: 4px;
+}
+
+.movie_back {
+  width: 100%;
+  height: 500px;
+  object-fit:cover;
+  object-position: 0 35%;
+  border-radius:4px;
+}
+
+.movie_detail {
+  align-items: center;
+  width: 75%;
+  display: flex;
+  position: relative;
+  bottom: 225px;
+}
+
+.movie_detailLeft {
+  margin-right: 30px;
+}
+
+.movie_poster {
+  width:300px;
+  border-radius: 10px;
+  box-shadow: rgba(96, 68, 68, 0.86) 0px 22px 40px 6px;
+}
+
+.movie_detailRight {
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #dddddd79;
+  color: rgb(19, 19, 19);
+  text-shadow: .4px .5px .3px rgb(22, 22, 22);
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  justify-content:space-between ;
+}
+
+.movie_detailRightTop > div{
+  text-shadow: 0px 0px 5px #000000;
+  margin-bottom: .5rem;
+}
+
+.movie_name {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.movie_voteCount {
+  margin-left: 1rem;
+}
+
+.movie_genres {
+  margin: 0.75rem;
+}
+
+.movie_genre {
+  padding: .5rem;
+  border: 2px solid white;
+  border-radius: 20px;
+  margin-right: 1rem;
+}
+
+
+.movie_detailRightBottom {
+  margin: 2rem 0;
+  flex: 0.8;
+}
+
+.descText {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.descText > div:last-of-type {
+  margin-left: auto;
+
+}
+
+
+.movie_links {
+  position: relative;
+  bottom: 15vh;
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.movie_heading {
+  font-size: 2.2rem;
+}
+
+.movie_Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 150px;
+  color: black;
+  font-weight: bold;
+}
+
+.movie_homeButton {
+  background-color:rgb(207, 198, 198);
+  
+}
+
+.movie_imdbButton {
+  background-color:#ecdd8f;
+}
+
+.newTab {
+  margin-left: 1.4rem;
+}
+
+.movie_production {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+}
+
+
+.movie_productionComapany {
+  width: 200px;
+  margin: 2rem;
+}
+
+.productionCompanyImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
  
 @media (max-width: 576px) {
 
