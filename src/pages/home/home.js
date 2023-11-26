@@ -43,7 +43,7 @@ const Home = () => {
                 >
                     {
                         popularMovies.map(movie => (
-                   <Link style={{textDecoration:"none",color:"white"}} to={`/movie/${movie.id}`} >
+                   <Link style={{ color:"white"}} to={`/movie/${movie.id}`} >
                     {/* свайпер хіро */}
                              <SwiperSlide>
                                 <div className="posterImage">
