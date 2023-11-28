@@ -1,6 +1,7 @@
  
 *{
   transition: all .2s ease-out;
+ 
 }
  
 .App {
@@ -48,13 +49,12 @@ position: relative;
 
  
 .logo_N_nav_wrapper{
-  gap: 20px;
+  gap: 50px;
   display: flex;
  
   
 }
 .logo_wrapper {
-   padding: 5px;
   position: relative;
   z-index: 1;
   display: flex;
@@ -75,7 +75,7 @@ position: relative;
 }
  
 .headerNav{
-  color: rgb(192, 188, 188);
+
  
   display: flex;
   justify-content:start;
@@ -203,10 +203,14 @@ bottom: 48%;
 }
 .swiper{
  overflow: hidden;
+
+}
+.swiper-wrapper{
+left: 100px;
 }
  
- 
 .swiper-slide{
+
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -229,10 +233,7 @@ bottom: 48%;
  -o-transform: perspective(350px) rotateX(10deg);
  transform: perspective(350px) rotateX(10deg);
 
-  &:hover{
-    transform: scale(0.9);
    
-  }
   .movie_card_desc{
     display: flex;
     flex-direction: column;
@@ -353,7 +354,7 @@ bottom: 48%;
 
     align-items: center;
     display: flex;
-    justify-content:space-between;
+    justify-content:space-evenly;
     
 }
 
@@ -401,7 +402,8 @@ a > span:hover {
 .list_title {
 font-size: 2rem;
 margin:  5px;
-color: brown;
+text-shadow: 1.3px 0.3px 1.3px rgb(192, 188, 188);
+color: rgb(67, 63, 180);
 }
 
 .list_cards {
@@ -423,15 +425,16 @@ color: brown;
   display: block;
   width: 100%;
 }
-
+#root > div > div.poster > div.swiper.swiper-initialized.swiper-horizontal > div > div.swiper-slide.swiper-slide-active{
+  max-width: 90%;
+}
 .posterImage_overlay {
   position: absolute;
-  padding: 50px;
+  padding: 30px;
   bottom: 0px;
-  height: 70%;
-  display: flex;
+  height: 70%;  display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 700%;
   justify-content: flex-end;
   align-items: flex-start;
   background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
@@ -445,9 +448,10 @@ color: brown;
 
 .posterImage_title {
   font-weight: 900;
-  font-size: 4rem;
-  margin-bottom: 0.4rem;
+  font-size: 3rem;
+  margin-bottom: 0.6rem;
   text-align: left;
+  max-width: 500px;
 }
 
 .posterImage_runtime {
@@ -461,12 +465,14 @@ color: brown;
 
 .posterImage_description {
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
   display: flex;
   text-align: left;
-  width: 50%;
-}
+  max-width: 500px;
+  max-height: 300px;
+ 
+ }
 
 
 
@@ -491,7 +497,7 @@ color: brown;
   height: 500px;
   object-fit:cover;
   object-position: 0 35%;
-  border-radius:4px;
+ 
 }
 
 .movie_detail {
@@ -499,7 +505,7 @@ color: brown;
   width: 75%;
   display: flex;
   position: relative;
-  bottom: 225px;
+  bottom: 350px;
 }
 
 .movie_detailLeft {
@@ -507,7 +513,7 @@ color: brown;
 }
 
 .movie_poster {
-  width:300px;
+  width:350px;
   border-radius: 10px;
   box-shadow: rgba(96, 68, 68, 0.86) 0px 22px 40px 6px;
 }
@@ -515,12 +521,12 @@ color: brown;
 .movie_detailRight {
   padding: 5px;
   border-radius: 4px;
-  background-color: #dddddd79;
+  background-color: #dddddd92;
   color: rgb(19, 19, 19);
   text-shadow: .4px .5px .3px rgb(22, 22, 22);
   display: flex;
   flex-direction: column;
-  height: 450px;
+  height: 400px;
   justify-content:space-between ;
 }
 
@@ -579,7 +585,10 @@ color: brown;
 }
 
 .movie_heading {
+  font-family: "Bebas Neue", sans-serif;
   font-size: 2.2rem;
+  color: #000;
+  text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6, 2px 2px 0 #ff6;
 }
 
 .movie_Button {
@@ -600,7 +609,8 @@ color: brown;
 }
 
 .movie_imdbButton {
-  background-color:#ecdd8f;
+  background-color:rgb(207, 198, 198);
+  box-shadow: rgba(237, 207, 207, 0.86) 0px 1px 18px 11px;
 }
 
 .newTab {
