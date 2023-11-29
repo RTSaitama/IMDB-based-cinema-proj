@@ -39,7 +39,8 @@ const Home = () => {
                         disableOnInteraction: false
                     }}
                     transitionTime={3}
-                    infiniteLoop={true}
+                
+                    loop={true}
                     showStatus={false}
                 >
                     {
