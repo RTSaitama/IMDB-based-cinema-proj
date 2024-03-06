@@ -12,12 +12,19 @@
 body{
   background-image:url(../../assets/star_wars_bg.webp);
 background-position: center;
-background-size:auto;
+background-size: cover;
+background-repeat: no-repeat;
+}
+#root{
+ 
+background-image:url(../../assets/star_wars_bg.webp);
+background-position: center;
+background-size: cover;
 background-repeat: no-repeat;
 }
 .page_wrapper {
   position: relative;
- 
+  width: fit-content;
  
  
  
