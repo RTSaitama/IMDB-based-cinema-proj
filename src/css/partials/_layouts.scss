@@ -10,15 +10,16 @@
  
 }
 #root{
-    height:max-content;
+ 
 background-image:url(../../assets/star_wars_bg.webp);
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
+width: fit-content;
 }
 .page_wrapper {
   position: relative;
-  width: fit-content;
+ 
  
  
  
