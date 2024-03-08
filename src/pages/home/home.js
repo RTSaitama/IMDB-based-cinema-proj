@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react"
  
  
- 
 import { Link } from "react-router-dom";
-import MovieList from "../../components/movieList/movieList";
+import MovieList from "../movieList/movieList";
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import Skeleton, { SkeletonTheme } from "react-loading-skeleton"
-// Import Swiper styles
 import 'swiper/css';
 
 const Home = () => {
@@ -17,18 +14,10 @@ const Home = () => {
         fetch("https://api.themoviedb.org/3/movie/popular?api_key=4e44d9029b1270a757cddc766a1bcb63&")
         .then(res => res.json())
         .then(data => setPopularMovies(data.results))
-    }, [])
+    }, []);
 
     return (
-        // isLoading
-        // ?
-        // <div className="poster">
-        //         <SkeletonTheme color="#a5a4a4" >
-        //         <Skeleton height={1000} duration={1} />
-        //     </SkeletonTheme>
-        // </div>
-        // :
-        <>
+ 
             <div className="poster">
                 <Swiper
                 centeredSlides={true}
@@ -70,7 +59,7 @@ const Home = () => {
                 </Swiper>
                 <MovieList />
             </div>
-        </>
+ 
     )
 }
 
