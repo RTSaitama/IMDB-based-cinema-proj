@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/IMDB-based-cinema-proj/static/css/main.de1fd5e7.css",
+    "main.js": "/IMDB-based-cinema-proj/static/js/main.aa9881d7.js",
+    "static/media/star_wars_bg.webp": "/IMDB-based-cinema-proj/static/media/star_wars_bg.2aabd9e3d5cf25555e86.webp",
+    "index.html": "/IMDB-based-cinema-proj/index.html",
+    "main.de1fd5e7.css.map": "/IMDB-based-cinema-proj/static/css/main.de1fd5e7.css.map",
+    "main.aa9881d7.js.map": "/IMDB-based-cinema-proj/static/js/main.aa9881d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de1fd5e7.css",
+    "static/js/main.aa9881d7.js"
+  ]
+}
